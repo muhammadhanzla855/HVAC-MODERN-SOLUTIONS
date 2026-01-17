@@ -1,0 +1,56 @@
+<!-- header.html -->
+<header class="header">
+  <div class="header__container">
+    <!-- Logo -->
+    <div class="header__logo">
+      <img src="./assets/icons/Modern.png" alt="Logo" />
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="header__nav">
+      <a class="header__link" href="./index.html">Home</a>
+      <a class="header__link" href="./aboutus.html">About Us</a>
+
+      <!-- Dropdown -->
+      <div class="header__dropdown">
+        <button class="header__dropdown-trigger">
+          Services
+          <span class="header__dropdown-icon">▾</span>
+        </button>
+
+        <div class="header__dropdown-menu">
+          <a href="./services.html">HVAC Installation</a>
+          <a href="./services/service2.html">Maintenance</a>
+          <a href="./services/service3.html">Air Quality</a>
+        </div>
+      </div>
+
+      <a class="header__link" href="./work.html">Work Gallery</a>
+      <a class="header__link" href="./blog.html">Blogs</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <div class="header__cta">
+      <button class="btn">
+        CONTACT US
+        <span class="btn__icon">
+          <img src="./assets/icons/arrow.svg" alt="Arrow" />
+        </span>
+      </button>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="header__mobile-toggle" id="mobileToggle">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="./index.html">Home</a>
+    <a href="./aboutus.html">About Us</a>
+    <a href="./blog.html">Blogs</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Work Gallery</a>
+  </div>
+</header>
