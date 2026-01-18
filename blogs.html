@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Modern HVAC Solutions</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1.25rem;
+      color: #555;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HERO / BLOG INTRO */
+    .blog-hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://via.placeholder.com/1400x400') center/cover no-repeat;
+      color: #fff;
+      border-radius: 12px;
+      margin-bottom: 4rem;
+    }
+    .blog-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+    .blog-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+    }
+
+    /* BLOG GRID */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-content h3 {
+      color: #FF3B00;
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .blog-card-content p {
+      flex: 1;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* READ MORE BUTTON */
+    .blog-card-content a.read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 1rem;
+      padding: 0.75rem 1.75rem;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #FF3B00;
+      border: 2px solid #FF3B00;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+    .blog-card-content a.read-more span {
+      font-size: 1.2rem;
+    }
+    .blog-card-content a.read-more:hover {
+      background: #FF3B00;
+      color: #fff;
+    }
+
+    /* FEATURED BLOG */
+    .featured-blog {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 4rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .featured-blog img {
+      flex: 1 1 400px;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .featured-blog-content {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .featured-blog-content h2 {
+      color: #FF3B00;
+      margin-bottom: 1rem;
+    }
+    .featured-blog-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    .featured-blog-content a.read-more {
+      align-self: flex-start;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .featured-blog {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <div id="header"></div>
+
+  <!-- BLOG HERO / INTRO -->
+  <section class="blog-hero">
+    <h1>Insights & Tips from Modern HVAC Experts</h1>
+    <p>Stay updated with the latest trends, guides, and advice on heating, ventilation, and air conditioning systems to make your spaces comfortable and energy-efficient.</p>
+  </section>
+
+  <!-- FEATURED BLOG -->
+  <section class="featured-blog">
+    <img src="https://via.placeholder.com/600x300" alt="Featured HVAC Blog">
+    <div class="featured-blog-content">
+      <h2>How to Maintain Your HVAC System for Maximum Efficiency</h2>
+      <p>Regular maintenance of your HVAC system can save energy, prevent costly repairs, and extend the lifespan of your equipment. Learn the best practices from our experts.</p>
+      <a href="./blog1.html" class="read-more">Read More <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-grid">
+    <!-- BLOG CARD 1 -->
+    <div class="blog-card">
+      <img src="https://via.placeholder.com/400x180" alt="Blog 1">
+      <div class="blog-card-content">
+        <h3>Top 5 Energy Saving Tips for Home HVAC</h3>
+        <p>Discover practical ways to reduce energy consumption and lower your utility bills while keeping your home comfortable year-round.</p>
+        <a href="./blog2.html" class="read-more">Read More <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- BLOG CARD 2 -->
+    <div class="blog-card">
+      <img src="https://via.placeholder.com/400x180" alt="Blog 2">
+      <div class="blog-card-content">
+        <h3>Choosing the Right Air Conditioning System for Your Business</h3>
+        <p>Explore key factors in selecting commercial HVAC systems to ensure optimal comfort and energy efficiency for your workplace.</p>
+        <a href="./blog3.html" class="read-more">Read More <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- BLOG CARD 3 -->
+    <div class="blog-card">
+      <img src="https://via.placeholder.com/400x180" alt="Blog 3">
+      <div class="blog-card-content">
+        <h3>Signs Your HVAC Needs Repair</h3>
+        <p>Learn how to spot warning signs early to avoid system breakdowns and ensure reliable heating and cooling all year long.</p>
+        <a href="./blog4.html" class="read-more">Read More <span>→</span></a>
+      </div>
+    </div>
+
+    <!-- BLOG CARD 4 -->
+    <div class="blog-card">
+      <img src="https://via.placeholder.com/400x180" alt="Blog 4">
+      <div class="blog-card-content">
+        <h3>Improving Indoor Air Quality in Your Home</h3>
+        <p>Tips and solutions to maintain healthy indoor air, including ventilation, filtration, and proper HVAC maintenance practices.</p>
+        <a href="./blog5.html" class="read-more">Read More <span>→</span></a>
+      </div>
+    </div>
+  </section>
+    <div id="footer"></div>
+
+</body>
+</html>
+<script>
+  fetch('header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+// Load footer
+fetch('footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer').innerHTML = data);
+
+</script>
