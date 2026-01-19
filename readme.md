@@ -143,3 +143,231 @@
     </div>
   </div>
 </section>
+
+
+/*
+
+<section class="get-call">
+  <div class="get-call__container">
+
+    <div class="get-call__text">
+      <h2 class="get-call__title">Get a Call Back</h2>
+      <p class="get-call__subtitle">
+        Leave your details and our HVAC experts will contact you shortly.
+      </p>
+    </div>
+
+    <form class="get-call__form" id="getCallForm">
+      <div class="form-field floating-label">
+        <input type="text" id="full-name" required />
+        <label for="full-name">Full Name</label>
+      </div>
+
+      <div class="form-field floating-label">
+        <input type="email" id="email" required />
+        <label for="email">Email Address</label>
+      </div>
+
+      <div class="form-field floating-label">
+        <input type="tel" id="phone" required />
+        <label for="phone">Phone Number</label>
+      </div>
+
+      <!-- CTA Button -->
+    <div class="header__cta">
+      <button class="btn">
+        Get a Call
+        <span class="btn__icon">
+          <img src="./assets/icons/arrow.svg" alt="Arrow" />
+        </span>
+      </button>
+    </div>
+    </form>
+
+  </div>
+</section>
+/* =============================== 
+   GET A CALL - NEXT LEVEL UI
+================================ */
+
+.get-call {
+  padding: 5rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.get-call__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Heading */
+.get-call__title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: fadeInUp 0.6s forwards 0.1s;
+}
+
+.get-call__subtitle {
+  font-size: 16px;
+  color: #4b5563;
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInUp 0.6s forwards 0.3s;
+}
+
+/* ================= FORM ================= */
+
+.get-call__form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1.5rem;
+
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 18px;
+
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.get-call__form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= FIELDS ================= */
+
+.floating-label {
+  position: relative;
+  flex: 1;
+}
+
+.floating-label input {
+  width: 100%;
+  padding: 16px 14px 16px 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  color: #111827;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 15px;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* Focus / active state */
+.floating-label input:focus {
+  border-color: #FF3B00;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 12px;
+  font-size: 12px;
+  color: #161313;
+  background: #ffffff;
+  padding: 0 4px;
+}
+
+/* Placeholder hidden */
+.floating-label input::placeholder {
+  color: transparent;
+}
+
+/* Invalid animation */
+.floating-label input.invalid {
+  animation: shake 0.35s;
+  border-color: #FF3B00;
+}
+
+/* ================= CTA BUTTON ================= */
+
+.get-call__btn {
+  height: 50px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.get-call__btn::before {
+  content: "";
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.25);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.get-call__btn:hover::before {
+  left: 125%;
+}
+
+.get-call__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.get-call__btn:active {
+  transform: translateY(1px);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .get-call__form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .get-call__btn {
+    width: 100%;
+  }
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+
+*/
