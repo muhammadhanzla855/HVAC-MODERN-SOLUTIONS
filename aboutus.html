@@ -249,6 +249,7 @@ ul.subservice__list li::before,
   max-height: 650px;
   object-fit: cover;
   display: block;
+  border-radius: 12px;
 }
 
 /* ===== SECTIONS ===== */
@@ -305,6 +306,7 @@ ul.subservice__list li::before,
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  
 }
 
 .image img,
@@ -312,6 +314,7 @@ ul.subservice__list li::before,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 12px;
 }
 
 /* IMAGE POSITIONING */
@@ -384,5 +387,32 @@ h2,
 h3 {
   color: #0b3c7a;
 }
+/* =========================
+   UNIFIED IMAGE HOVER EFFECT
+   Lift + Shadow (no zoom)
+========================= */
+
+/* Ensure all image containers are ready for hover */
+.mini-split-image,
+.images,
+.subservice__images,
+.image,
+.subservice__image {
+  position: relative;
+  overflow: visible;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+/* Hover effect: lift + shadow only */
+.mini-split-image:hover,
+.images:hover .image,
+.subservice__images:hover .subservice__image {
+  transform: translateY(-5px); /* subtle lift */
+  box-shadow: 0 10px 24px #0b3c7a; /* blue shadow like your cards */
+}
+
 
 </style>
