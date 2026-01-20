@@ -4,50 +4,73 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 />
 
-<footer class="footers">
-  <div class="footer-wrapper">
+<div id="footer" class="footers-root">
+  <footer class="footers">
 
-    <!-- LEFT: BRAND + DESCRIPTION + SOCIAL -->
-    <div class="footer-brand">
-      <div class="footer-logo">Modern Heating & Cooling Solutions</div>
-      <p class="follow-text">Follow us on social media</p>
-      <div class="social-icons">
-        <a href="#" class="icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="icon" title="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <div class="footer-wrapper">
+
+      <!-- LEFT -->
+      <div class="footer-brand">
+        <div class="footer-logo">Modern Heating & Cooling Solutions</div>
+        <p class="follow-text">Follow us on social media</p>
+
+        <div class="social-icons">
+          <a href="#" class="icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
+
+      <!-- RIGHT -->
+      <div class="footer-chat">
+        <p class="chat-text">Need Help? Chat with us</p>
+
+        <div class="chat-icons">
+          <a href="https://web.whatsapp.com/" class="icon" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:info@modernhvac.com" class="icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- RIGHT: CHAT / CONTACT -->
-    <div class="footer-chat">
-      <p class="chat-text">Need Help? Chat with us</p>
-      <div class="chat-icons">
-        <a href="https://wa.me/1234567890" class="icon" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="mailto:info@modernhvac.com" class="icon" title="Email"><i class="fas fa-envelope"></i></a>
-      </div>
+    <!-- COPYRIGHT -->
+    <div class="footer-copyright">
+      &copy; 2026 MODERN HEATING AND COOLING SOLUTIONS. All rights reserved.
     </div>
 
-  </div>
-
-  <!-- COPYRIGHT -->
-  <div class="footer-copyright">
-    &copy; 2026 MODERN HEATING AND COOLING SOLUTIONS. All rights reserved.
-  </div>
-</footer>
-
+  </footer>
+</div>
 <style>
-/* FOOTER WRAPPER */
+ /* FULL WIDTH ROOT */
+.footers-root {
+  width: 99vw;
+  margin-left: calc(50% - 50vw); /* BREAK OUT OF CENTERED LAYOUT */
+  background: #1a1a1a;
+}
+
+/* FOOTER ELEMENT */
+.footers {
+  width: 100%;
+}
+
+/* INNER CONTENT WIDTH */
 .footer-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 6%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem 6%;
-  background: #1a1a1a;
   color: #fff;
 }
 
+/* ================= BRAND ================= */
 .footer-logo {
   font-size: 1.3rem;
   font-weight: 700;
@@ -57,49 +80,49 @@
   -webkit-text-fill-color: transparent;
 }
 
-
-.follow-text, .chat-text {
+.follow-text,
+.chat-text {
   margin-bottom: 0.8rem;
   font-size: 0.95rem;
-
 }
 
-/* SOCIAL / CHAT ICONS */
-.social-icons, .chat-icons {
+/* ================= ICON GROUPS ================= */
+.social-icons,
+.chat-icons {
   display: flex;
   gap: 1rem;
 }
 
+/* ================= ICON ================= */
 .icon {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 38px;
   height: 38px;
-  background: #fff;
+  background: #ffffff;
   color: #0b3c7a;
   border-radius: 50%;
   font-size: 1rem;
-  transition: all 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .icon:hover {
   background: #0b3c7a;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* COPYRIGHT */
+/* ================= COPYRIGHT ================= */
 .footer-copyright {
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
+  padding: 1rem;
   background: #444;
-  color: #fff;
+  font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .footer-wrapper {
     flex-direction: column;
@@ -107,8 +130,10 @@
     text-align: center;
   }
 
-  .social-icons, .chat-icons {
+  .social-icons,
+  .chat-icons {
     justify-content: center;
   }
 }
+
 </style>
