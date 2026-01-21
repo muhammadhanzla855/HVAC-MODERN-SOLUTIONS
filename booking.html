@@ -1,0 +1,179 @@
+<section class="booking-section">
+
+  <!-- LEFT (MAP) -->
+  <div class="booking-section__map-wrapper">
+    <iframe class="booking-section__map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123456789!2d-74.005941!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sYour+Business+Name!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+  <!-- RIGHT (FORM) -->
+  <div class="booking-section__form-wrapper">
+    <form id="bookingForm" class="booking-form">
+      <div class="booking-form__group">
+        <label class="booking-form__label">Full Name</label>
+        <input type="text" class="booking-form__input" placeholder="Your full name" required>
+      </div>
+      <div class="booking-form__group">
+        <label class="booking-form__label">Email Address</label>
+        <input type="email" class="booking-form__input" placeholder="Type your email address" required>
+      </div>
+      <div class="booking-form__group">
+        <label class="booking-form__label">Phone Number</label>
+        <input type="tel" class="booking-form__input" placeholder="xxx-xxx-xxxx" required>
+      </div>
+      <div class="booking-form__group">
+        <label class="booking-form__label">Your Message</label>
+        <textarea class="booking-form__textarea" rows="4" placeholder="Type your message here..." required></textarea>
+      </div>
+      <button type="submit" class="booking-form__button">
+        GET A CALL BACK
+        <span class="booking-form__button-icon">→</span>
+      </button>
+    </form>
+  </div>
+
+</section>
+
+<style>
+/* ================= RESET ================= */
+.booking-section *,
+.booking-section *::before,
+.booking-section *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BOOKING SECTION ================= */
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+@media(min-width: 768px) {
+  .booking-section {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+}
+
+/* ================= MAP ================= */
+.booking-section__map-wrapper {
+  flex: 1;
+}
+
+.booking-section__map {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+}
+
+/* ================= FORM ================= */
+.booking-section__form-wrapper {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-form__group {
+  margin-bottom: 1.25rem;
+}
+
+.booking-form__label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.booking-form__input,
+.booking-form__textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  background-color: #f3f4f6;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow 0.3s;
+  resize: vertical;
+}
+
+.booking-form__input:focus,
+.booking-form__textarea:focus {
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.4);
+  background-color: #fff;
+}
+
+/* ================= BUTTON ================= */
+.booking-form__button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: #f97316;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.booking-form__button:hover {
+  background-color: #ea580c;
+}
+
+.booking-form__button-icon {
+  background-color: #fff;
+  color: #f97316;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.booking-form__button:hover .booking-form__button-icon {
+  transform: translateX(3px);
+  background-color: #000;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
+  .booking-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .booking-section__map {
+    min-height: 300px;
+  }
+
+  .booking-section__form-wrapper {
+    max-width: 100%;
+  }
+}
+</style>

@@ -284,9 +284,21 @@
     </div>
   </div>
 </section>
+
+<!-- Placeholder -->
+<div id="booking-placeholder"></div>
+
+
 <!-- Footer placeholder -->
 <div id="footer" class="footers-root"></div>
 
     <script type="module" src="index.js"></script>
 </body>
 </html>
+<script>
+  fetch('booking.html')
+    .then(res => res.text())
+    .then(data => document.getElementById('booking-placeholder').innerHTML = data)
+    .catch(err => console.error('Error loading booking section:', err));
+</script>
+
