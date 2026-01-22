@@ -1,3 +1,8 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
 <!-- header.html -->
 <header class="header">
   <div class="header__container">
@@ -37,14 +42,41 @@
     </nav>
 
     <!-- CTA Button -->
-    <div class="header__cta">
-      <button class="btn">
-        CONTACT US
-        <span class="btn__icon">
-          <img src="./assets/icons/arrow.svg" alt="Arrow" />
-        </span>
-      </button>
-    </div>
+    <!-- Social Icons CTA -->
+<div class="header__socials">
+  <a href="https://wa.me/XXXXXXXXXX"
+     class="header__social"
+     title="WhatsApp"
+     target="_blank"
+     rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="https://www.instagram.com/modernheatingandcoolingsol/"
+     class="header__social"
+     title="Instagram"
+     target="_blank"
+     rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://www.facebook.com/profile.php?id=61585459842352"
+     class="header__social"
+     title="Facebook"
+     target="_blank"
+     rel="noopener noreferrer">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <a href="https://x.com/"
+     class="header__social"
+     title="X (Twitter)"
+     target="_blank"
+     rel="noopener noreferrer">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+</div>
+
 
     <!-- Mobile Toggle -->
     <button class="header__mobile-toggle" id="mobileToggle">
@@ -61,3 +93,33 @@
     <a href="#">Work Gallery</a>
   </div>
 </header>
+<style>
+  /* ================= HEADER SOCIALS ================= */
+.header__socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #ffffff;
+  color: #0b3c7a;
+  border-radius: 50%;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header__social:hover {
+  background: #0b3c7a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+</style>

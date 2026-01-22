@@ -2,10 +2,17 @@
 
   <!-- LEFT (MAP) -->
   <div class="booking-section__map-wrapper">
-    <iframe class="booking-section__map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.123456789!2d-74.005941!3d40.712776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sYour+Business+Name!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
-      allowfullscreen="" loading="lazy"></iframe>
-  </div>
+  <iframe
+    class="booking-section__map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d937.4595361899112!2d72.32954148089834!3d31.97330661641243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39215d41fc7facb7%3A0x84bcd87baf98af60!2sLahori%20Gate!5e0!3m2!1sen!2s!4v1769013329505!5m2!1sen!2s"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+  
 
   <!-- RIGHT (FORM) -->
   <div class="booking-section__form-wrapper">
@@ -66,6 +73,11 @@
 /* ================= MAP ================= */
 .booking-section__map-wrapper {
   flex: 1;
+}
+.booking-section__map:hover {
+  transform: translateY(-5px);       /* subtle lift */
+  box-shadow: 0 10px 24px #0b3c7a;  /* same color as card hover */
+  transition: transform 0.3s ease;
 }
 
 .booking-section__map {
@@ -176,4 +188,10 @@
     max-width: 100%;
   }
 }
+@media(max-width: 768px) {
+  .booking-section__map {
+    min-height: 250px; /* smaller height for mobile */
+  }
+}
+
 </style>
